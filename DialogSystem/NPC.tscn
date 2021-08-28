@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://DialogSystem/Conversationchar.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[sub_resource type="Animation" id=1]
+length = 0.1
+
+[sub_resource type="Animation" id=2]
+loop = true
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 40, 40 )
+
+[node name="NPC" type="Area2D"]
+pause_mode = 2
+script = ExtResource( 1 )
+Chat = [ [ "What?" ] ]
+
+[node name="Sprite" type="Sprite" parent="."]
+self_modulate = Color( 0.411765, 0, 0.560784, 1 )
+texture = ExtResource( 2 )
+region_rect = Rect2( 14.6701, 18.983, 67.3027, 40.0952 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Idle"
+anims/Idle = SubResource( 1 )
+anims/Talk = SubResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.57079
+shape = SubResource( 4 )
