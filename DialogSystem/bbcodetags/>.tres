@@ -1,6 +1,6 @@
 [gd_resource type="RichTextEffect" load_steps=2 format=2]
 
-[ext_resource path="res://bbcodetags/>.gd" type="Script" id=1]
+[ext_resource path="res://DialogSystem/bbcodetags/>.gd" type="Script" id=1]
 
 [resource]
 script = ExtResource( 1 )
