@@ -13,7 +13,7 @@ position = Vector2( 512, 300 )
 [node name="DialogueBase" parent="." instance=ExtResource( 3 )]
 
 [node name="NPC" parent="." instance=ExtResource( 2 )]
-position = Vector2( 200, 200 )
+position = Vector2( 300, 200 )
 Chat = [ [ "This is a Dialog sample. ", "I, can, talk, slow, [>] but you can speed me." ] ]
 
 [node name="Base" type="Node" parent="."]
